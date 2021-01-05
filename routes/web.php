@@ -5,7 +5,7 @@ use App\Http\Controllers\users;
 use App\Http\Controllers\Cars;
 use App\Http\Controllers\Login;
 use App\Http\controllers\httpcontroller;
-// use App\Http\Controllers\users;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,6 +20,8 @@ use App\Http\controllers\httpcontroller;
 
 Route::view('/',"login");
 
+Route::post('login', [UserController::class, 'login']);
+Route::get('dashbord', [UserController::class, 'dashbord']);
 /*
 Route::get('/', function () {
     return view('welcome');
