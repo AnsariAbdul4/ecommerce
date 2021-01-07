@@ -22,6 +22,8 @@ Route::view('/',"login");
 
 Route::post('login', [UserController::class, 'login']);
 Route::get('dashbord', [UserController::class, 'dashbord']);
+Route::get('language/{lang}', [UserController::Class, 'chage_language']);
+
 /*
 Route::get('/', function () {
     return view('welcome');

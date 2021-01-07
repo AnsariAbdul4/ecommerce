@@ -1,12 +1,13 @@
 @extends('template')
 @section('container')
+
 {{ session('success') }}
 <form action="login" method="POST" >
 	@csrf
 <div class="row">
-	<h1 class="col-md-12">Login Page</h1> <br />
+	<h1 class="col-md-12">{{ __('lang.Login Page') }}</h1> <br />
   <div class="col-md-1" >
-		<label>Email</label>
+		<label>{{ __('lang.Email') }}</label>
 	</div>
 	<div class="col-md-4" >		
 		<input type="email" name="email" /> <br />
@@ -14,7 +15,7 @@
 </div> <br />
 <div class="row">	
 	<div class="col-md-1" >
-		<label>Password</label>
+		<label>{{ __('lang.Password') }}</label>
 	</div>
 	<div class="col-md-4" >
 		<input type="password" name="password" /> <br />
